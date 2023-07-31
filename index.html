@@ -4,8 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      .grid-container{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 2fr;
+        grid-template-areas: 
+        'header header header header'
+        'content content content aside'
+        'footer footer footer footer';
+      }
+      @media screen and (max-width: 1087px) {
+
+        .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto !important;
+        grid-template-areas: 
+        'header header header header'
+        'content content content content'
+        'aside aside aside aside'
+        'footer footer footer footer';
+      }
+      }
+      
+      .grid-container > div{
+        color: rgb(90, 5, 5);
+        outline: 2px solid black;
+        padding: 20px;
+      }
+      #header{
+        grid-area: header;
+        background-color:#f8f9fa;
+      }
+      #content{
+        grid-area: content;
+        background-color: azure;
+        
+        
+      }
+      #aside{
+        grid-area: aside;
+        background-color: beige;
+      }
+      #footer{
+        grid-area: footer;
+        background: rgb(194, 133, 255);
+      }
+      .notice{
+        display: flex;
+        justify-content: center;
+      }
+
+
+      @media screen and (min-width: 1087px) {
+
+      .navbar-nav > .nav-item{
+        font-size: 25px;
+        margin-left: 50px;
+        
+      }
+      }
+      .navbar-nav > .nav-item >.nav-link:hover{
+        color: rgb(114, 158, 255);
+        
+      }
+  
+    </style>
 </head>
 <body>
-    <h1>hello</h1>
+  <div class="container-fluid">
+    <div class="container">
+        <div class="grid-container">
+            <div id="header">
+              <div class="header-title text-center">  
+                <h4>MSBTE QUESTION PAPERS</h4>
+                <p>Download Question Papers and Model Answer</p>
+              </div>
+              
+              <div class="header-nav ">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#"> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                      
+                        
+                      </ul>
+                    
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div id="content">
+              <div class="branch-table">
+                <div><h3>Computer Engineering</h3></div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="branch-table">
+                <div><h3>Electrical Engineering</h3></div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="aside">
+             <div class="aside-card">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+               
+                 <marquee class="notice"  direction="up" style="height: 200px;">
+                  <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ex?</h3>
+                  <a href="">21-7-23</a>
+                </marquee>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                 <marquee class="notice"  direction="up" style="height: 200px;"> hello guys</marquee>
+                </div>
+              </div>
+
+              
+
+
+             
+             </div>
+            </div>
+            <div id="footer">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa fuga reiciendis necessitatibus voluptatem qui ratione facere molestias aliquam provident ullam numquam velit explicabo, laboriosam nulla repudiandae earum? Doloribus consequuntur in facere nisi similique architecto distinctio eligendi nemo ex, nesciunt atque, excepturi fugit sit, alias nam eaque repellendus expedita nihil. Aliquam expedita dignissimos explicabo! Libero, obcaecati dolor, saepe molestias, itaque ducimus aperiam deleniti debitis dolorum doloribus esse magnam. Porro perspiciatis, modi ratione eligendi hic, quis repudiandae at aliquid et neque voluptate obcaecati tenetur labore libero atque similique voluptatem saepe voluptatibus minus? Sit, tempore delectus fugiat rem a illum vero quasi libero voluptas aperiam. Repudiandae quo iure consequatur totam eaque consectetur. Cum provident nulla laudantium, sunt molestiae magni eaque libero temporibus earum doloremque totam sint culpa possimus optio autem ullam amet consequuntur. Blanditiis voluptatem nostrum ex illum asperiores rerum quia est atque quos ea obcaecati hic explicabo, nisi nulla perferendis accusamus iusto, dicta maiores sapiente laboriosam eveniet ipsa dolores consequatur? Temporibus accusantium facere eligendi quos reprehenderit? Facilis, modi qui quo ex ipsam, magnam, veniam perferendis eius aperiam sunt dolorum consequatur eligendi ipsum nam voluptatem repudiandae repellendus! Odit explicabo quidem porro illo ut, corrupti sapiente nostrum numquam. Quo maxime nostrum voluptates illum.
+
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </body>
 </html>
