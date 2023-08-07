@@ -66,14 +66,35 @@
       @media screen and (min-width: 1087px) {
 
       .navbar-nav > .nav-item{
+       
         font-size: 25px;
         margin-left: 50px;
         
       }
       }
-      .navbar-nav > .nav-item >.nav-link:hover{
-        color: rgb(114, 158, 255) !important;
+
+      .navbar-nav > .nav-item >.nav-link{
+  
+        border-radius: 20px;
+       
         
       }
+
+      .navbar-nav > .nav-item >.nav-link:hover{
+      
+        color: rgb(114, 158, 255) !important;
+      
+      
   
+      
+       
+        
+      }
+      .navbar-toggler{
+        border: none !important;
+      }
     
+      .navbar-light .navbar-toggler {
+        color: rgb(255, 255, 255) !important;
+      
+    }
